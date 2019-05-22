@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <!-- Required meta tags -->
+    <meta charset='UTF-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Title -->
+    <title>Mission to Mars</title> 
+
+
+  <style>
+    .wrapper {
+    text-align: center;
+     }
+    #button{
+      background-color: rgb(61, 61, 117);
+      border:None;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .box{width:100%;
+         border: 1px solid black;
+         padding:10px;
+         margin-left:-20px;
+         margin-top: 30px;
+      }
+
+    .column {
+       width: 50%;
+       padding: 10px;
+    }
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color:white;
+      text-align: center;}
+      
+  </style>
+
+</head>
+
+<body style="background-color:white">
+  <!-- Header Section -->
+  <div class = "container-fluid" style="padding-left:30px; padding-right:30px"> 
+      <div class="jumbotron" style="padding-top:15px; padding-bottom:15px;"  >
+        <h1 align="center">Mission to Mars</h1>
+        <br>
+        <div class="wrapper">
+          <button type="button" class="btn btn-primary btn-lg" id=button>Scrape New Data</button>
+        </div>
+      </div>
+      <main>
+          <section class="posts">
+            <article class="post">
+              <h2 style ="margin-top:20px">Latest News: {{ Marsinfo.news_title }}</h2>
+              <p style="padding-left:10px;">{{ Marsinfo.news_para }}<p>
+              
+            </article>  
+          </section>
+          
+       
+        <div class="container-fluid " style = "margin-top:30px;padding-left:0;padding-right:0;" >
+        <div class="row align-items-start">
+          <div class= "col-lg-8 col-xs-8" >
+            <h3>Featured Mars Image</h3></p>
+            <img  src= "{{ Marsinfo.featured_image_url }}" style="width:90%;  margin: 5px;" alt=“Featured Image”>
+            </div>
+          <div class="col-lg-4 col-xs-8">
+            <div class="box" ><h5 style= "padding:20px">Current Weather on Mars</h5>
+                 <p>{{ Marsinfo.mars_weather }}</p>
+            </div>
+                
+            <h3 class='text-warning' style="margin-top: 10px;">Mars Facts</h3>
+            <div>{{ Marsinfo.Mars_Facts|safe }}</div>
+            
+          </div>
+          </div>    
+         
+          <div ><h2 style="text-align:center; margin-top:20px;"> Mars Hemispheres</h2></div>
+          <hr style="border: 1px solid black;">
+          <div class="row" style ="margin-top:20px;"> 
+            
+            <div class="column">
+              <div style="border: 1px solid black; padding:3px; margin-bottom:10px;">
+                <img  src="{{ Marsinfo.Valles_Marineris_Hemisphere_Enhanced }}" style ="width:100%;" alt="Valles Marineris Hemispher">
+                <div><h5 style="text-align:center;">Valles Marineris Hemisphere Enhanced</h5></div>
+              </div>
+              <div style="border: 1px solid black; padding:3px; margin-bottom:10px;">
+                <img  src="{{ Marsinfo.Schiaparelli_Hemisphere_Enhanced }}" style ="width:100%;" alt="Schiaparelli Hemispher">
+                <div><h5 style="text-align:center;"> Schiaparelli Hemisphere Enhanced</h5></div>
+              </div>
+            </div>
+            <div class="column">
+              <div style="border: 1px solid black; padding:3px; margin-bottom:10px;">
+                <img src="{{ Marsinfo.Cerberus_Hemisphere_Enhanced }}" style ="width:100%;" alt="Cerberus Hemispher">
+                <div> <h5 style="text-align:center;">Cerberus Hemisphere Enhanced</h5></div>
+              </div>
+              <div style="border: 1px solid black; padding:3px; margin-bottom:10px;">
+                <img  src="{{ Marsinfo.Syrtis_Major_Hemisphere_Enhanced }}" style ="width:100%;" alt="Syrtis Major Hemispher">
+                <div><h5 style="text-align:center;">Syrtis Major Hemisphere Enhanced</h5></div>
+              </div>
+            </div>
+                       
+          </div>
+        </div>
+      </div>
+ 
+
+  </main> 
+  </div> -->
+   <!-- |||footer||| -->
+   <div class="footer " style="background-color:#d8dfe6" >Mission to Mars - by Fawn Zou</div>
+      
+</body>
+</html>    
