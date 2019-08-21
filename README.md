@@ -61,6 +61,10 @@ Use MongoDB with Flask templating to create a new HTML page that displays all of
 - - -
 ## Check the final application screenshot
 
-![Screenshot_Mission_to_ Mars](Screenshot_Mission_to_ Mars.jpg)
+![screenshot](Screenshot_Mission_to_Mars.jpg)
+
+
+
+
 
 
